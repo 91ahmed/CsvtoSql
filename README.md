@@ -1,5 +1,5 @@
 # Transform Csv to SQL
-## simple class for exporting data from .csv file and transform it to SQL insert statement.
+### simple class for exporting data from .csv file and transform it to SQL insert statement.
 
 ## Example
 
