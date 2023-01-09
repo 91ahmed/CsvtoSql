@@ -1,7 +1,9 @@
 <?php
 	
 	/**
-	 * 	Transform Csv File to SQL Insert Statement
+	 * 	Transform Csv to SQL Insert Statement
+	 *
+	 *	@author (Ahmed Hassan)
 	 */
 	class ExportCsv
 	{

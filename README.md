@@ -1,29 +1,49 @@
-# Transform Csv to SQL
-### simple class for exporting data from .csv file and transform it to SQL insert statement.
+## Transform Csv to SQL
+PHP class for __exporting__ data from _.csv_ file and __transform__ it to _SQL_ insert statement.
 
-## Example
+### How to Use
 
 ``` php
+// Import the class
+require ('ExportCsv.php');
+
+// Example
 $csv = new ExportCsv();
-$csv->file('files/sales.csv')
-	->table('users')
-	->transform()
-	->exportSQL('csv.sql');
+$csv->file('files/sales.csv') // Source
+    ->table('salse')
+    ->transform()
+    ->exportSQL('exported/sales.sql'); // destination
 ```
 
-## Class Methods
+### Class Methods
 
 1- ``` file() ``` <br/>
-Used to specify the csv file location that ready for transform.<br/>
-It takes 1 string parameter (csv file location).
+> Determine the source file you need to transform.
+``` php
+	// @param string, source file
+	file('folder/file.csv');
+```
 
-2- ``` table() ``` <br/>
-Determine the name of the table you want to use in the SQL Insert statement.<br/>
-It takes 1 string parameter (table name)
+2- ``` driver() ```
+> Select a database driver if you want the format of the SQL statement to be compatible with a specific database.
+``` php
+	// @param string, database driver name
+	driver('mysql');
+```
 
-3- ``` transform() ``` <br/>
-Transform csv format to SQL statement.
+3- ``` table() ```
+> Determine the name of the table you want to use in the SQL statement.
+``` php
+	// @param string, table name
+	table('tablename');
+```
 
-4- ``` exportSQL() ``` <br/>
-This method creates a new .sql file with the new transformed data and putting it in the root directory by default.<br/>
-It takes 1 string parameter (new sql file name)
+4- ``` transform() ```
+> Transform _csv_ format to _SQL_ statement.
+
+5- ``` exportSQL() ```
+> This method creates a new _.sql_ file with the new transformed data.
+``` php
+	// @param string, SQL file destination
+	exportSQL('exported/file.sql');
+```
