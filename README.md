@@ -47,8 +47,3 @@ table('tablename');
 // @param string, SQL file destination
 exportSQL('exported/file.sql');
 ```
-
-<br/>
-<br/>
-
-![logo](https://raw.githubusercontent.com/91ahmed/91ahmed/main/logo-ahmed.png)
