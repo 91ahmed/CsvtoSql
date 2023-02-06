@@ -1,9 +1,8 @@
 <?php
-	require ('ExportCsv.php');
+	require ('vendor/autoload.php');
 
-	$csv = new ExportCsv();
+	$csv = new Csv\Csvtosql\TransformCsv();
 	$csv->file('files/sales.csv')
-	    ->driver('mysql')
 	    ->table('salse')
 	    ->transform()
 	    ->exportSQL('exported/sales.sql');

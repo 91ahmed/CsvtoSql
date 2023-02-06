@@ -1,0 +1,17 @@
+{
+    "name": "csv/csvtosql",
+    "description": "PHP class to extract data from (csv) file and transform it to (sql) insert statement with new sql file.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Csv\\Csvtosql\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahmed hassan",
+            "email": "ahmedh12491@gmail.com"
+        }
+    ],
+    "require": {}
+}

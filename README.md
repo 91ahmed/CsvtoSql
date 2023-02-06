@@ -1,49 +1,48 @@
-## Transform Csv to SQL
-PHP class for __exporting__ data from _.csv_ file and __transform__ it to _SQL_ insert statement.
+## CsvtoSQL
+PHP class for __exporting__ data from __csv__ file and __transform__ it into __SQL__ insert statement.
 
-#### How to Use
+### Install
+via composer
+``` bash
 
-``` php
-// Import ExportCsv class
-require ('ExportCsv.php');
-
-// Example
-$csv = new ExportCsv();
-$csv->file('files/sales.csv') // Source
-    ->table('salse')
-    ->transform()
-    ->exportSQL('exported/sales.sql'); // destination
 ```
 
-#### Class Methods
+### Example
+
+``` php
+// Import vendor autoload
+require ('vendor/autoload.php');
+
+// Example
+$csv = new Csv\Csvtosql\TransformCsv();
+$csv->file('files/sales.csv') // Source (csv file)
+    ->table('salse')
+    ->transform()
+    ->exportSQL('transform/sales.sql'); // Destination (new sql file with insert statement)
+```
+
+### Methods Description
 
 1- ``` file() ``` <br/>
-> Determine the source file you need to transform.
+> Determine the source csv file you need to transform.
 ``` php
-// @param string, source file
+// @param string (csv source file path)
 file('folder/file.csv');
 ```
 
-2- ``` driver() ```
-> Select a database driver if you want the format of the SQL statement to be compatible with a specific database.
-``` php
-// @param string, database driver name
-driver('mysql');
-```
-
-3- ``` table() ```
+2- ``` table() ``` <br/>
 > Determine the name of the table you want to use in the SQL statement.
 ``` php
-// @param string, table name
+// @param string (table name)
 table('tablename');
 ```
 
-4- ``` transform() ```
-> Transform _csv_ format to _SQL_ statement.
+3- ``` transform() ``` <br/>
+> Extract data from (__csv__) and Transform it to (__SQL__).
 
-5- ``` exportSQL() ```
-> This method creates a new _.sql_ file with the new transformed data.
+4- ``` exportSQL() ``` <br/>
+> Create a new (__sql__) file with the transformed data as an insert statement.
 ``` php
-// @param string, SQL file destination
+// @param string (new sql file destination)
 exportSQL('exported/file.sql');
 ```

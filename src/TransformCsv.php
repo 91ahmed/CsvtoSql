@@ -1,11 +1,14 @@
 <?php
 	
+	namespace Csv\Csvtosql;
+
 	/**
-	 * 	Transform Csv to SQL Insert Statement
+	 * 	PHP class to transform CSV file to SQL insert statement.
 	 *
-	 *	@author (Ahmed Hassan)
+	 *	@author ahmed hassan
+	 *	@link http://91ahmed.github.io
 	 */
-	class ExportCsv
+	class TransformCsv
 	{
 		private $file;
 		private $table;
