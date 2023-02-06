@@ -1,5 +1,5 @@
 ## CsvtoSQL
-PHP class for __exporting__ data from __csv__ file and __transform__ it into __SQL__ insert statement.
+PHP class to extract data from (csv) file and transform it to (sql) file as an insert statement.
 
 ### Install
 via composer
