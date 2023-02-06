@@ -31,7 +31,7 @@ file('folder/file.csv');
 ```
 
 2- ``` table() ``` <br/>
-> Determine the name of the table you want to use in the SQL statement.
+> Determine the name of the table you want to use in the sql statement.
 > The class will consider the first row of the csv file as the columns of the table.
 ``` php
 // @param string (table name)
