@@ -32,16 +32,17 @@ file('folder/file.csv');
 
 2- ``` table() ``` <br/>
 > Determine the name of the table you want to use in the SQL statement.
+> The class will consider the first row of the csv file as the columns of the table.
 ``` php
 // @param string (table name)
 table('tablename');
 ```
 
 3- ``` transform() ``` <br/>
-> Extract data from (__csv__) and Transform it to (__SQL__).
+> Extract data from (csv) and Transform it to (sql).
 
 4- ``` exportSQL() ``` <br/>
-> Create a new (__sql__) file with the transformed data as an insert statement.
+> Create a new (sql) file with the transformed data as an insert statement.
 ``` php
 // @param string (new sql file destination)
 exportSQL('exported/file.sql');
