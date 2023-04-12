@@ -11,7 +11,7 @@ composer require csv/csvtosql
 
 ``` php
 // Import vendor autoload
-require ('vendor/autoload.php');
+require ('vendor/autoload.php'); 
 
 // Example
 $csv = new Csv\Csvtosql\TransformCsv();
