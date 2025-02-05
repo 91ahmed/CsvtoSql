@@ -1,5 +1,4 @@
-## CsvtoSQL
-PHP class to extract data from (csv) file and transform it to (sql) insert statement.
+**CsvtoSql** is a class that converts CSV files into SQL INSERT statements, making it easy to import data into databases like MySQL, PostgreSQL, and SQLite.
 
 ### Install
 via composer
